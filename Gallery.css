@@ -1,0 +1,13 @@
+body{
+    margin:0;
+    padding:none;
+    justify-content: center;
+    background-color: black;
+}
+
+.image{
+    position:relative;
+    overflow:visible;
+    border-radius:10px;
+
+}

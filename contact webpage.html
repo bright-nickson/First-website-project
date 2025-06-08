@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel = "stylesheet" href = "contact webpage.css">
+</head>
+    
+<header>
+    <div class="logo">
+        <h2>Korku Kish</h2>          
+    </div> 
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></a></li>   
+            <li><a href="About website.html">about</a></a></li>
+            <li><a href="">services</a></a></li>
+        </ul>
+    </nav> 
+</header>
+
+<body>
+    <div class = "background"></div>
+    <div class ="form">
+    <form action = "index.php" method = "POST">
+        
+       
+      
+        <div class ="name">
+            <label for = "name"><big>Name</big> </label><br>
+            <input type = "text" id="name" placeholder = "First name" minlength="6" required><br>
+            <label for="name"></label>
+            <input type="text"id = "name" placeholder="Last Name">
+        </div>
+        
+        <div class ="email">
+            <label for = "email"><big>Email</big></label><br>
+            <input type = "email" id="email" placeholder = "name@gmail.com" required><br>
+        </div>
+
+        <div class ="phone">
+            <label for = "phone"><big>Phone </big></label><br>
+            <input type = "phone" id="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
+        </div>
+        
+        <div class ="message">
+            <label for = "Message"><big>Message(All spam will be ignored) </big></label><br>
+            <input type = "text" id="message" required><br>
+            <p><h2>purpose of email</h2></p>
+        <divc class = "radio" required>
+            <label for="radio"><big>Business Enquiries</big></label>
+            <input type="radio" id = "radio" name = "enquiries">
+        </div>
+        <div class = "radio">
+            <label for="radio"><big>Booking Schedule</big></label>
+            <input type="radio" id = "radio"  name = "enquiries"    >
+        </div>
+        
+
+
+        </div>
+            <button type ="submit">Send message</button>
+        </div>
+
+    </form>
+       <footer>
+        
+            <h3>&copy; All rights reserved</h3>
+       </footer>
+</body>
+</html>
