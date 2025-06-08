@@ -49,10 +49,27 @@ nav ul li a{
 
 #image1{
         position: absolute;
-        width:2%;
-        height:2%;
-        left: 0%;
+        border: 3px solid;
+        border-color:aliceblue;
+        width:min-content;
+        height:min-content;
+        display: flex;        
+        padding:5px;
+        border-radius:50px;
     }
+
+#image2{
+        position: absolute;
+        border: 3px solid;
+        border-color:aliceblue;
+        width:min-content;
+        height:min-content;
+        left: 75%;
+        display: flex;        
+        padding:5px;
+        border-radius:50px;
+}
+
 
 
 .background{
