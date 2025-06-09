@@ -1,6 +1,7 @@
 @media (max-width:768px) {
     .image{
-        width:100%;
+        margin-left:auto;
+        margin-right: auto;
         padding:20px;
     }
 }
@@ -81,7 +82,14 @@ body {
     background:linear-gradient(to right,rgb(206, 17, 127),rgb(0, 225, 255),rgb(0, 174, 255));  
   }
     
+@media only screen and(max-width: 400px) {
+    .image{
+        visibility: collapse;
+    }
 
+
+    
+}
     .image {
   
        
