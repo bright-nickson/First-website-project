@@ -74,7 +74,7 @@ body {
         font-size: 18px;
         position:absolute; 
         left: 42%;
-        top: 105%;
+        top: 98%;
  
     }
     .btn:hover {
@@ -114,7 +114,7 @@ body {
     }
 
     #image2{
-        position: relative;
+        position: absolute;
         width:25%;
         height:50%;
         left:25%;
@@ -122,27 +122,28 @@ body {
     }
 
     #image3{
-        position: relative;
-        width:25%;
-        height:50%;     
+        position: absolute;
+        max-width:25%;
+        max-height:50%;     
         left: 45%;
  
     }
 
     #image4{
-        position: relative;
-        width:25%;
-        height:50%;
+        position: absolute;
+        max-width:25%;
+        max-height:50%;
         left:65%;
      
     }
 
     
     #image5{
-        position: relative;
-        width:25%;
-        height:50%;     
+        position: absolute;
+        max-width:25%;
+        max-height:50%;     
         left: 85%;
+        padding:10px;
  
     }
 
