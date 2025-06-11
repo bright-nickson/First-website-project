@@ -1,6 +1,6 @@
 header,footer{
     background-color:transparent;
-    color:rgb(13, 207, 207);
+    color:rgb(255, 255, 255);
     width:100%;
     height: 10vh;
 }
@@ -11,7 +11,6 @@ footer{
     text-align:center;
     font-size: 22px;
     padding: none;
-
 }
 
 header h2{
@@ -59,7 +58,6 @@ color: azure;
 display:flex;
 align-items: center;
 padding:30px;
-border:solid ;
 border-radius: 50px;
 box-shadow:2px 2px 4px rgb(0, 0, 0);
 justify-self: center;
@@ -128,10 +126,7 @@ backdrop-filter: blur(3px);
 }
 
 
-textarea {
-    height: 100px;
-    resize: vertical;
-}
+
 
 /* Button Styling */
 button {
@@ -142,16 +137,15 @@ button {
     border-radius: 8px;
     border: none;
     cursor: pointer;
-    margin-top: 15px;
-    background: linear-gradient(to bottom, #472335, #302b63, #0f0c29);
-    color: orange;
+    background: linear-gradient(to bottom, #218a69, #19463e, #021e20);
+    color: rgb(147, 174, 220);
     font-family: Arial, sans-serif;
     box-shadow: 2px 2px 4px black;
     transition: background 0.3s ease;
 }
 
 button:hover {
-    background: #302b63;
+    background: #3f4eaf;
     color: white;
 }
 
