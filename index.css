@@ -8,11 +8,11 @@
 
 
     #p {
-        font-size: 28px;
+        font-size: 20px;
     }
 
-    #p1 {
-        font-size: 22px;
+    #p1{
+        font-size: 48px;
     }
 
     .hive-menu {
@@ -24,15 +24,17 @@
         padding: 10px;
     }
 }
-/* 
 @media (max-width: 400px) {
     .image {
         display: none;
-    } */
-
+    }
+}
 
 body {
     background-image: url("download.jpeg"), linear-gradient(to bottom, #472335, #302b63, #0f0c29);
+    background-image:  url("download.jpeg"), -webkit-linear-gradient(to bottom, #472335, #302b63, #0f0c29);
+    background-image:  url("download.jpeg"), -moz-linear-gradient(to bottom, #472335, #302b63, #0f0c29);
+    background-image: url("download.jpeg"),  -o-linear-gradient (to bottom, #472335, #302b63, #0f0c29);
     background-blend-mode: overlay;
     background-position: center;
     background-attachment: fixed;
@@ -71,18 +73,26 @@ nav ul li a {
     transform: scale(1.1);
 }
 
+a, a:visited, a:active{
+
+    color:white;
+    text-decoration: none;
+}
+
+
 #p {
     background: linear-gradient(to right, rgb(206, 17, 127), rgb(0, 225, 255), rgb(0, 174, 255));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-weight: bold;
-    font-size: 40px;
+    font-size:26px;
 }
 
 #p1 {
     color: white;
-    font-size: 30px;
+    font-size:15px;
+    padding: none;
 }
 
 .btn {
@@ -92,15 +102,12 @@ nav ul li a {
     border-radius: 5px;
     text-decoration: none;
     font-size: 18px;
-    position: absolute;
-    
-    bottom: auto;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+   
 }
 
 .btn:hover {
-    background: linear-gradient(to right, rgb(206, 17, 127), rgb(0, 225, 255), rgb(0, 174, 255));
+    background: linear-gradient(to right, rgb(93, 37, 70), rgb(68, 124, 132), rgb(56, 83, 95));
 }
 
 /* .image {
