@@ -6,14 +6,6 @@
         flex-wrap: wrap;
     }
 
-    .btn {
-        position: relative;
-        left: auto;
-        top: auto;
-        display: block;
-        margin: 20px auto;
-        text-align: center;
-    }
 
     #p {
         font-size: 28px;
@@ -101,7 +93,7 @@ nav ul li a {
     text-decoration: none;
     font-size: 18px;
     position: absolute;
-    left: 42%;
+    
     bottom: auto;
     justify-content: center;
     align-items: center;
