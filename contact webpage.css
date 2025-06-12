@@ -144,6 +144,29 @@ button {
     transition: background 0.3s ease;
 }
 
+#country-code {
+    color: rgb(39, 38, 38);
+    background-color: transparent;
+    width: auto;
+    height: auto;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 2px solid white;
+    padding: 10px;
+    box-shadow: 2px 2px 6px black;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+
+/* Optional: For a clean dropdown arrow in modern browsers */
+#country-code:focus {
+    outline: none;
+    border-color: cyan;
+}
+
+
 button:hover {
     background: #3f4eaf;
     color: white;
