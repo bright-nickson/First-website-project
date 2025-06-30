@@ -138,6 +138,7 @@ h2 {
   color: #fff;
   width: 90%;
   max-width: 700px;
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
