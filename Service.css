@@ -66,7 +66,11 @@ nav a:hover::after {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('web image.jpg') center/cover no-repeat;
+  background:url('web image.jpg') center/cover no-repeat ,linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  background-blend-mode: overlay;
+  background-position: center;
+  background-attachment: fixed;
+  
   color: #fff;
   text-align: center;
   padding: 120px 20px;
@@ -94,22 +98,11 @@ nav a:hover::after {
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  gap: 10px;
   padding: 20px 0;
 }
 
-.service-card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
-.service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-}
 
 /* Footer */
 footer {
