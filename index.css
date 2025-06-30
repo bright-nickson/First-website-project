@@ -71,6 +71,7 @@ nav ul li a {
 
 .hive-menu li:hover {
     transform: scale(1.1);
+    color: #302b63;
 }
 
 a, a:visited, a:active{
@@ -107,7 +108,7 @@ a, a:visited, a:active{
 }
 
 .btn:hover {
-    background: linear-gradient(to right, rgb(93, 37, 70), rgb(68, 124, 132), rgb(56, 83, 95));
+    background: linear-gradient(to right, rgb(182, 21, 83), rgb(35, 15, 90), rgb(12, 14, 116));
 }
 
 /* .image {
