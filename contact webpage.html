@@ -25,27 +25,27 @@
 <body>
     <div class = "background"></div>
     <div class ="form">
-    <form action = "Send.js" method = "POST">
+    <form action="http://localhost:3000/Send.js" method="POST">
         
        
       
         <div class ="name">
             <label for = "name"><big>Name</big> </label><br>
-            <input type = "text" id="name" placeholder = "First name" minlength="6" required><br>
+            <input type = "text" id="name" name = "firstname" placeholder = "First name" minlength="6" required><br>
             <label for="name"></label>
-            <input type="text"id = "name" placeholder="Last Name">
+            <input type="text"id = "lastname" name = "lastname" placeholder="Last Name">
         </div>
         
         <div class ="email">
             <label for = "email"><big>Email</big></label><br>
-            <input type = "email" id="email" placeholder = "name@gmail.com" required><br>
+            <input type = "email" id="email" name = "email" placeholder = "name@gmail.com" required><br>
         </div>
 
         <div class ="phone">
           
 
             <label for = "phone"><big>Phone</big></label><br>
-            <input type = "phone" id="phone" placeholder="123-456-7890" required><br>
+            <input type = "tel" id="phone" name = "phone" placeholder="123-456-7890" required><br>
         </div>
 
 
@@ -53,25 +53,28 @@
 
         <div class ="message">
             <label for = "Message"><big>Message(All spam will be ignored) </big></label><br>
-            <input type = "text" id="message" required><br>
+            <input type = "text" id="message" name = "message" required><br>
+
             <p><h2>Purpose of Email</h2></p>
-        <divc class = "radio" required>
+        <div class = "radio" required>
             <label for="radio"><big>Business Enquiries</big></label>
-            <input type="radio" id = "radio" name = "enquiries">
+            <input type="radio" id = "radio" name = "enquiries" value="Business Enquiries" required>
         </div>
         <div class = "radio">
             
             <label for="radio"><big>Booking Schedule</big></label>
-            <input type="radio" id = "radio"  name = "enquiries"    >
+            <input type="radio" id = "radio"  name = "enquiries" value="Booking Schedule" required>
         </div>
         
 
 
         </div>
             <button type ="submit">Send message</button>
-        </div>
+        
 
     </form>
+    </div>
+
        <footer>
         
      <footer class="footer">
@@ -84,33 +87,6 @@
             <h3>&copy; All rights reserved</h3>
        </footer>
        
-       <script>
-  document.getElementById('contact-form').addEventListener('submit', async function (e) {
-    e.preventDefault();
-
-    const data = {
-      name: document.getElementById('first-name').value + ' ' + document.getElementById('last-name').value,
-      email: document.getElementById('email').value,
-      phone: document.getElementById('phone').value,
-      message: document.getElementById('message').value,
-      enquiry: document.querySelector('input[name="enquiry"]:checked').value
-    };
-
-    try {
-      const res = await fetch('http://localhost:5000/send', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      });
-
-      const result = await res.json();
-      alert(result.message || 'Message sent!');
-    } catch (err) {
-      alert('There was an error sending your message.');
-      console.error(err);
-    }
-  });
-</script>
 
 
 </body>
