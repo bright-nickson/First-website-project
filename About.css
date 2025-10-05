@@ -1,0 +1,358 @@
+/* ===== GENERAL RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    background-color: #000;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* ===== BACKGROUND ===== */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(71, 35, 53, 0.8), rgba(48, 43, 99, 0.8), rgba(15, 12, 41, 0.8));
+    z-index: -1;
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: transparent;
+    color: #ffffff;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    text-transform: capitalize;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    color: #00acee;
+    transform: scale(1.05);
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ===== IMAGE SECTION ===== */
+.image {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto 40px;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.image img:hover {
+    transform: scale(1.05);
+}
+
+/* ===== ABOUT CONTENT ===== */
+.about-content {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 30px 0;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 40px 0 20px;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: underline;
+
+    text-underline-offset: 8px;
+}
+
+#moments,
+#approach {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #fff;
+    margin: 20px auto;
+    width: 100%;
+    text-align: center;
+    padding: 0 20px;
+}
+
+#p1,
+#p3 {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 30px 20px;
+    margin-top: auto;
+}
+
+.footer p {
+    margin: 10px 0;
+    padding: 0;
+}
+
+.social-icons {
+    margin: 15px 0;
+}
+
+.social-icons a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 24px;
+    margin: 0 15px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.social-icons a:hover {
+    color: #00acee;
+    transform: translateY(-3px);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    header {
+        padding: 20px 30px;
+    }
+
+    .logo h2 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    nav ul li a {
+        font-size: 1.3rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Mobile Landscape & Small Tablets */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo h2 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+        padding: 8px 12px;
+    }
+
+    .image {
+        max-width: 350px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        margin: 20px 0;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+        margin: 30px 0 15px;
+    }
+
+    p {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+
+    .footer {
+        font-size: 1rem;
+        padding: 25px 15px;
+    }
+
+    .social-icons a {
+        font-size: 20px;
+        margin: 0 12px;
+    }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+    header {
+        padding: 15px;
+    }
+
+    .logo h2 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    nav ul li a {
+        font-size: 1.1rem;
+    }
+
+    .image {
+        max-width: 100%;
+        margin: 15px auto 30px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        margin: 15px 0;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        margin: 25px 0 12px;
+    }
+
+    p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        padding: 0 10px;
+    }
+
+    .footer {
+        font-size: 0.9rem;
+        padding: 20px 10px;
+    }
+
+    .social-icons a {
+        font-size: 18px;
+        margin: 0 10px;
+    }
+}
+
+/* Very Small Devices */
+@media (max-width: 360px) {
+    .logo h2 {
+        font-size: 1.3rem;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+        padding: 6px 10px;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}
