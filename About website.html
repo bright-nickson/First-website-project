@@ -10,58 +10,128 @@
 </head>
 <body>
     <!-- Header -->
-    <header>    
+    <header class="header">
         <div class="logo">
-            <h2>Korku Kish</h2>          
-        </div> 
-
-        <nav>
+            <h1>Korku Kish</h1>
+        </div>
+        <button class="burger-menu" id="burgerMenu" aria-label="Toggle menu">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+        <nav class="nav" id="navMenu">
             <ul>
-                <li><a href="index.html">Home</a></li>   
-                <li><a href="contact webpage.html">Contact</a></li>
-                <li><a href="Service.html">Services</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="KK Shot It Gallery.html"><i class="fas fa-images"></i> Gallery</a></li>
+                <li><a href="Service.html"><i class="fas fa-briefcase"></i> Services</a></li>
+                <li><a href="contact webpage.html"><i class="fas fa-envelope"></i> Contact</a></li>
             </ul>
-        </nav> 
+        </nav>
     </header>
 
-    <!-- Background -->
-    <div class="background"></div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay">
+            <div class="container">
+                <h2>About Korku Kish</h2>
+
+            </div>
+        </div>
+    </section>
+    <div class="img"></div>
 
     <!-- Main Content -->
-    <main>
-        <!-- Profile Image -->
-        <div class="image" id="image2">
-            <img src="Kish.jpg" alt="Korku Kish Portrait">
+    <main class="about-section">
+        <div class="container">
+            <!-- Profile Image -->
+            <div class="profile-image" data-scroll>
+                <img src="Kish.jpg" alt="Korku Kish Portrait">
+            </div>
+
+            <!-- About Content -->
+            <div class="about-content" data-scroll>
+                <h3>Capturing Life's Precious Moments</h3>
+                <p>
+                    Welcome to KORKU KISH Photography! We're dedicated to preserving life's most precious moments through stunning 
+                    photography. Our speciality lies in capturing the magic of fine art, birthdays, group portraits
+                    and professional business photography.
+                </p>
+
+                <h3>Our Approach</h3>
+                <p>
+                    We believe in telling stories through images. Our approach is personalized, creative and attentive to detail. 
+                    We take time to understand your vision, ensuring that every photo reflects your unique style and personality.
+                </p>
+            </div>
         </div>
-
-        <!-- About Section -->
-        <section class="about-content">
-            <h1 id="h1">About Korku Kish</h1>
-
-            <h2 id="moments">CAPTURING LIFE'S PRECIOUS MOMENTS</h2>
-            <p id="p1">
-                Welcome to KORKU KISH Photography! We're dedicated to preserving life's most precious moments through stunning 
-                photography. Our speciality lies in capturing the magic of fine art, birthdays, group portraits
-                and professional business photography.
-            </p>
-
-            <h2 id="approach">OUR APPROACH</h2>
-            <p id="p3">
-                We believe in telling stories through images. Our approach is personalized, creative and attentive to detail. 
-                We take time to understand your vision, ensuring that every photo reflects your unique style and personality.
-            </p>
-        </section>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>follow KorkuKish on:</p>
-        <div class="social-icons">
-            <a href="https://www.facebook.com/Kishmawuli"target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/korkukish_shotit/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://x.com/KorkuKish" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        <div class="footer-content">
+            <p class="footer-text">Follow Korku Kish on:</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/Kishmawuli" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/korkukish_shotit/" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://x.com/KorkuKish" target="_blank" aria-label="Twitter">
+                    <i class="fab fa-x-twitter"></i>
+                </a>
+            </div>
+            <p class="footer-copyright">&copy; 2025 Korku Kish Photography. All Rights Reserved.</p>
         </div>
-        <p>&copy; 2025 Korku Kish Photography. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Burger Menu
+        const burgerMenu = document.getElementById('burgerMenu');
+        const navMenu = document.getElementById('navMenu');
+
+        burgerMenu.addEventListener('click', () => {
+            burgerMenu.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        });
+
+        document.querySelectorAll('.nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                burgerMenu.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.pageYOffset > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('[data-scroll]').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>

@@ -3,26 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Korku Kish Gallery</title>
+    <title>Fashion Photography - Korku Kish</title>
     <link rel="icon" type="image/jpg" href="Favicon.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="Gallery.css">
+    <link rel="stylesheet" href="Category.css">
 </head>
 <body>
     <!-- Header -->
-    <header>
+    <header class="header">
         <div class="logo">
-            <h1>KorkuKish Fashion </h1>
+            <h1>Korku Kish</h1>
         </div>
-        <nav>
+        <button class="burger-menu" id="burgerMenu" aria-label="Toggle menu">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+        <nav id="navMenu">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="About website.html">About</a></li>
+                <li><a href="Service.html">Services</a></li>
                 <li><a href="contact webpage.html">Contact</a></li>
-                <li><a href="Service.html">Service</a></li>
             </ul>
         </nav>
     </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Fashion</h1>
+            <p>Where Style Meets Artistry</p>
+        </div>
+    </section>
 
     <!-- Gallery Section -->
     <main class="gallery-container">
@@ -76,6 +89,27 @@
 
     <!-- JavaScript -->
     <script>
+        // Burger Menu
+        const burgerMenu = document.getElementById('burgerMenu');
+        const navMenu = document.getElementById('navMenu');
+
+        burgerMenu.addEventListener('click', () => {
+            burgerMenu.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.pageYOffset > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Lightbox functionality
         let currentImageIndex = 0;
         const allImages = document.querySelectorAll('.gallery-img');
 
@@ -84,7 +118,7 @@
             const lightboxImg = document.getElementById('lightbox-img');
             currentImageIndex = Array.from(allImages).indexOf(img);
             
-            lightbox.style.display = 'flex';
+            lightbox.classList.add('active');
             lightboxImg.src = img.src;
             lightboxImg.alt = img.alt;
             updateCounter();
@@ -93,7 +127,7 @@
 
         function closeLightbox() {
             const lightbox = document.getElementById('lightbox');
-            lightbox.style.display = 'none';
+            lightbox.classList.remove('active');
             document.body.style.overflow = 'auto';
         }
 
@@ -120,7 +154,7 @@
         // Keyboard navigation
         document.addEventListener('keydown', function(e) {
             const lightbox = document.getElementById('lightbox');
-            if (lightbox.style.display === 'flex') {
+            if (lightbox.classList.contains('active')) {
                 if (e.key === 'Escape') {
                     closeLightbox();
                 } else if (e.key === 'ArrowLeft') {

@@ -5,158 +5,285 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="icon" type="image/jpg" href="Favicon.jpg">
-    <title>KorkuKish</title>
+    <title>KorkuKish Photography</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <!-- Animated particles background -->
+    <div class="particles" id="particles"></div>
+
     <!-- Header -->
-    <header>
-        <nav>
-            <ul class="hive-menu">
-                <li><a href="About website.html">about</a></li> 
-                <li><a href="Service.html">service</a></li> 
-                <li><a href="contact webpage.html">Contact</a></li> 
+    <header class="header">
+        <div class="logo">
+            <h1>Korku Kish</h1>
+        </div>
+        <button class="burger-menu" id="burgerMenu" aria-label="Toggle menu">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+        <nav class="nav" id="navMenu">
+            <ul>
+                <li><a href="About website.html"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="Service.html"><i class="fas fa-briefcase"></i> Service</a></li>
+                <li><a href="contact webpage.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="KK Shot It Gallery.html"><i class="fas fa-images"></i> Gallery</a></li>
             </ul>
         </nav>
     </header>
     
     <!-- Main Content -->
     <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">WELCOME TO KORKU KISH PHOTOGRAPHY </h1>
+                <p class="hero-subtitle">Capturing Moments, Creating Memories</p>
 
+            </div>
+        </section>
 
         <!-- Meet KK Section -->
         <section class="meet-kk">
             <div class="kk-container">
-                <div class="kk-image">
-                    <img src="kkkk.jpg" alt="Korku Kish - Professional Photographer">
+                <div class="kk-image" data-aos="fade-right">
+                    <div class="image-frame">
+                        <img src="kkkk.jpg" alt="Korku Kish - Professional Photographer">
+                        <div class="image-overlay"></div>
+                    </div>
                 </div>
-                <div class="kk-content">
-                    <h2>Meet The Artist</h2>
-                    <h3>I'm Korku Kish, A Passionate Photographer</h3>
-                    <p>
+                <div class="kk-content" data-aos="fade-left">
+
+                    <h3 class="kk-heading">I'm Korku Kish, A Passionate Photographer</h3>
+                    <p class="kk-text">
                         With a keen eye for detail and a passion for storytelling, I capture moments that matter. 
                         My journey in photography began with a simple belief: every moment has a story worth telling, 
                         and every story deserves to be beautifully preserved.
                     </p>
-                    <p>
+                    <p class="kk-text">
                         From intimate portraits to grand celebrations, I bring creativity, professionalism, and heart 
                         to every shoot. Let's create something extraordinary together.
                     </p>
-                    <a href="About website.html" class="kk-button">Learn More About Me</a>
+                    <a href="About website.html" class="kk-button">
+                        <span>Learn More About Me</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </section>
         
         <!-- Gallery Section -->
-        <section id="gallery">
+        <section id="gallery" class="gallery-section">
+            <div class="gallery-header" data-aos="fade-up">
+                <h2 class="section-title">Portfolio Categories</h2>
+                <p class="section-subtitle">Explore my work across different photography styles</p>
+            </div>
+
             <div class="image-container">
-                <div class="image" id="image1">
-                    <img src="web image.jpg" alt="Portrait" class="responsive-img">
+                <div class="image gallery-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="image-wrapper">
+                        <img src="web image.jpg" alt="Birthday Photography" class="responsive-img">
+                        <div class="image-overlay-gradient"></div>
+                    </div>
                     <div class="caption">
-                        <a href="Birthday.html">Birthday</a>
+                        <h3 class="caption-title">Birthday</h3>
+                        <p class="caption-desc">Celebrate life's special moments</p>
+                        <a href="Birthday.html" class="caption-link">
+                            <span>View Gallery</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
 
-                <div class="image" id="image2">
-                    <img src="webimage3.jpg" alt="urban" class="responsive-img">
+                <div class="image gallery-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="image-wrapper">
+                        <img src="webimage3.jpg" alt="Urban Photography" class="responsive-img">
+                        <div class="image-overlay-gradient"></div>
+                    </div>
                     <div class="caption">
-                        <a href="Urban.html">Urban</a>
+                        <h3 class="caption-title">Urban</h3>
+                        <p class="caption-desc">City life through my lens</p>
+                        <a href="Urban.html" class="caption-link">
+                            <span>View Gallery</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
 
-                <div class="image" id="image3">
-                    <img src="webimage 2.jpg" alt="Wildlife" class="responsive-img">
+                <div class="image gallery-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="image-wrapper">
+                        <img src="webimage 2.jpg" alt="Fashion Photography" class="responsive-img">
+                        <div class="image-overlay-gradient"></div>
+                    </div>
                     <div class="caption">
-                        <a href="Fashion.html">Fashion</a>
+                        <h3 class="caption-title">Fashion</h3>
+                        <p class="caption-desc">Style meets artistry</p>
+                        <a href="Fashion.html" class="caption-link">
+                            <span>View Gallery</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
 
-                <div class="image" id="image4">
-                    <img src="KorkuKish.jpg" alt="Photoshoot" class="responsive-img">
+                <div class="image gallery-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="image-wrapper">
+                        <img src="KorkuKish.jpg" alt="Portrait Photography" class="responsive-img">
+                        <div class="image-overlay-gradient"></div>
+                    </div>
                     <div class="caption">
-                        <a href="Portriat.html">portrait</a>
+                        <h3 class="caption-title">Portrait</h3>
+                        <p class="caption-desc">Capturing your essence</p>
+                        <a href="Portriat.html" class="caption-link">
+                            <span>View Gallery</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Explore Button -->
-        <section class="explore-section">
-            <a href="KK Shot It Gallery.html" class="btn">Explore Gallery</a>
+        <section class="explore-section" data-aos="fade-up">
+            <div class="explore-content">
+                <h2 class="explore-title">Ready to See More?</h2>
+                <p class="explore-text">Explore my complete collection of photography work</p>
+                <a href="KK Shot It Gallery.html" class="btn btn-primary">
+                    <span>Explore Full Gallery</span>
+                    <i class="fas fa-images"></i>
+                </a>
+            </div>
         </section>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>follow KorkuKish on:</p>
-        <div class="social-icons">
-            <a href="https://www.facebook.com/Kishmawuli" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/korkukish_shotit/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://x.com/KorkuKish" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        <div class="footer-content">
+            <p class="footer-text">Follow Korku Kish on:</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/Kishmawuli" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/korkukish_shotit/" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://x.com/KorkuKish" target="_blank" aria-label="Twitter">
+                    <i class="fab fa-x-twitter"></i>
+                </a>
+            </div>
+            <p class="footer-copyright">&copy; 2025 Korku Kish Photography. All Rights Reserved.</p>
         </div>
-        <p>&copy; 2025 KORKU KISH</p>
     </footer>
 
-    <!-- JavaScript for Gallery Animations -->
+    <!-- JavaScript -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const galleryItems = document.querySelectorAll('.image');
-            
-            // Add will-animate class to prepare for animation
-            galleryItems.forEach(function(item) {
-                item.classList.add('will-animate');
-            });
+        // Burger Menu
+        const burgerMenu = document.getElementById('burgerMenu');
+        const navMenu = document.getElementById('navMenu');
 
-            // Intersection Observer for scroll animations
+        burgerMenu.addEventListener('click', () => {
+            burgerMenu.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        });
+
+        document.querySelectorAll('.nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                burgerMenu.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            });
+        });
+
+        // Particle system
+        function createParticles() {
+            const container = document.getElementById('particles');
+            for (let i = 0; i < 100; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.width = `${Math.random() * 10 + 5}px`;
+                particle.style.height = particle.style.width;
+                particle.style.left = `${Math.random() * 100}vw`;
+                particle.style.top = `${Math.random() * 100}vh`;
+                particle.style.animationDelay = `${Math.random() * 5}s`;
+                container.appendChild(particle);
+            }
+        }
+
+        // Scroll animations
+        function initScrollAnimations() {
             const observerOptions = {
-                threshold: 0.2,
-                rootMargin: '0px 0px -50px 0px'
+                threshold: 0.15,
+                rootMargin: '0px 0px -100px 0px'
             };
 
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(function(entry) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        const index = Array.from(galleryItems).indexOf(entry.target);
-                        setTimeout(function() {
-                            entry.target.classList.add('animate-in');
-                        }, index * 150);
+                        entry.target.classList.add('aos-animate');
                         observer.unobserve(entry.target);
                     }
                 });
             }, observerOptions);
 
-            // Observe all gallery items
-            galleryItems.forEach(function(item) {
-                observer.observe(item);
+            document.querySelectorAll('[data-aos]').forEach(el => {
+                observer.observe(el);
             });
+        }
 
-            // Parallax mouse movement effect
-            const imageContainer = document.querySelector('.image-container');
-            if (imageContainer) {
-                imageContainer.addEventListener('mousemove', function(e) {
-                    const images = document.querySelectorAll('.image');
-                    const rect = imageContainer.getBoundingClientRect();
-                    const x = (e.clientX - rect.left) / rect.width;
-                    const y = (e.clientY - rect.top) / rect.height;
+        // Parallax effect on mouse move
+        function initParallax() {
+            document.addEventListener('mousemove', (e) => {
+                const cards = document.querySelectorAll('.gallery-card');
+                const x = (e.clientX / window.innerWidth - 0.5) * 20;
+                const y = (e.clientY / window.innerHeight - 0.5) * 20;
 
-                    images.forEach(function(img, i) {
-                        const depth = (i + 1) * 3;
-                        const moveX = (x - 0.5) * depth;
-                        const moveY = (y - 0.5) * depth;
-                        
-                        if (!img.matches(':hover')) {
-                            img.style.transform = 'translate(' + moveX + 'px, ' + moveY + 'px)';
-                        }
-                    });
+                cards.forEach((card, index) => {
+                    const depth = (index + 1) * 0.5;
+                    card.style.transform = `translate(${x * depth}px, ${y * depth}px)`;
                 });
+            });
+        }
 
-                imageContainer.addEventListener('mouseleave', function() {
-                    const images = document.querySelectorAll('.image');
-                    images.forEach(function(img) {
-                        img.style.transform = '';
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
                     });
-                });
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.pageYOffset > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
             }
+        });
+
+        // Initialize everything
+        document.addEventListener('DOMContentLoaded', () => {
+            createParticles();
+            initScrollAnimations();
+            initParallax();
+        });
+
+        // Image hover effects
+        document.querySelectorAll('.gallery-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.querySelector('.responsive-img').style.transform = 'scale(1.1) rotate(2deg)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.querySelector('.responsive-img').style.transform = 'scale(1) rotate(0deg)';
+            });
         });
     </script>
 </body>
