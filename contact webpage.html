@@ -14,8 +14,12 @@
         <div class="logo">
             <h2>Korku Kish</h2>          
         </div> 
-
-        <nav>
+        <button class="burger-menu" id="burgerMenu" aria-label="Toggle menu">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+        <nav id="navMenu">
             <ul>
                 <li><a href="index.html">Home</a></li>   
                 <li><a href="About website.html">About</a></li>
@@ -132,6 +136,26 @@
     </footer>
 <script>    
 document.addEventListener('DOMContentLoaded', function() {
+    // Burger Menu
+    const burgerMenu = document.getElementById('burgerMenu');
+    const navMenu = document.getElementById('navMenu');
+
+    if (burgerMenu && navMenu) {
+        burgerMenu.addEventListener('click', () => {
+            burgerMenu.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        });
+
+        document.querySelectorAll('#navMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                burgerMenu.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            });
+        });
+    }
+
     // Use a single resilient selector: prefer the form inside .form-wrapper, otherwise try the explicit id
     const contactFormCandidate = document.querySelector('.form-wrapper form');
     const contactFormById = document.getElementById('contact-form');

@@ -603,10 +603,10 @@ main {
     .header.scrolled {
         padding: 12px 4%;
     }
-    .hive-menu {
+    .nav {
         gap: 25px;
     }
-    .hive-menu li a {
+    .nav li a {
         font-size: 16px;
         padding: 8px 15px;
     }
@@ -647,10 +647,10 @@ main {
     .header {
         padding: 15px 3%;
     }
-    .hive-menu {
+    .nav {
         gap: 20px;
     }
-    .hive-menu li a {
+    .nav li a {
         font-size: 14px;
         padding: 6px 12px;
     }
@@ -726,11 +726,11 @@ main {
     .header {
         padding: 12px 5%;
     }
-    .hive-menu {
+    .nav {
         flex-direction: row;
         gap: 15px;
     }
-    .hive-menu li a {
+    .nav li a {
         font-size: 13px;
         padding: 6px 10px;
         letter-spacing: 1px;
@@ -843,7 +843,7 @@ main {
 }
 /* Very Small Devices */
 @media (max-width: 360px) {
-    .hive-menu li a {
+    .nav li a {
         font-size: 12px;
         padding: 5px 8px;
     }
@@ -914,7 +914,7 @@ button:focus {
     max-width: 1400px;
     margin: 0 auto;
 }
-.hive-menu {
+.nav {
     list-style: none;
     display: flex;
     gap: 40px;
@@ -928,7 +928,7 @@ button:focus {
 .nav-item:hover {
     transform: translateY(-3px);
 }
-.hive-menu li a {
+.nav li a {
     text-decoration: none;
     color: #fff;
     font-size: 18px;
@@ -940,7 +940,7 @@ button:focus {
     position: relative;
     transition: all 0.3s ease;
 }
-.hive-menu li a::before {
+.nav li a::before {
     content: '';
     position: absolute;
     bottom: 5px;
@@ -951,10 +951,10 @@ button:focus {
     transform: translateX(-50%);
     transition: width 0.3s ease;
 }
-.hive-menu li a:hover::before {
+.nav li a:hover::before {
     width: 80%;
 }
-.hive-menu li a:hover {
+.nav li a:hover {
     color: #d4af37;
 }
 /* ===== HERO SECTION ===== */
@@ -1420,10 +1420,10 @@ main {
     .header.scrolled {
         padding: 12px 4%;
     }
-    .hive-menu {
+    .nav {
         gap: 25px;
     }
-    .hive-menu li a {
+    .nav li a {
         font-size: 16px;
         padding: 8px 15px;
     }
@@ -1464,10 +1464,10 @@ main {
     .header {
         padding: 15px 3%;
     }
-    .hive-menu {
+    .nav {
         gap: 20px;
     }
-    .hive-menu li a {
+    .nav li a {
         font-size: 14px;
         padding: 6px 12px;
     }
@@ -1543,11 +1543,11 @@ main {
     .header {
         padding: 12px 5%;
     }
-    .hive-menu {
+    .nav {
         flex-direction: row;
         gap: 15px;
     }
-    .hive-menu li a {
+    .nav li a {
         font-size: 13px;
         padding: 6px 10px;
         letter-spacing: 1px;
@@ -1660,7 +1660,7 @@ main {
 }
 /* Very Small Devices */
 @media (max-width: 360px) {
-    .hive-menu li a {
+    .nav li a {
         font-size: 12px;
         padding: 5px 8px;
     }
